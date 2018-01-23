@@ -1,0 +1,4 @@
+# This sets up Netlify's redirects
+
+# This allows us to set up an SPA with history pushstate
+/*    /index.html   200
