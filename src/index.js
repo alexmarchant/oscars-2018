@@ -14,7 +14,6 @@ import {
   routerMiddleware,
 } from 'react-router-redux'
 import reducers from './reducers'
-import registerServiceWorker from './registerServiceWorker'
 import App from './components/App'
 
 import './index.css'
@@ -47,5 +46,3 @@ ReactDOM.render(
   </Provider>,
   document.getElementById('root')
 )
-
-registerServiceWorker()
