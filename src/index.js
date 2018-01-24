@@ -15,7 +15,7 @@ import {
 } from 'react-router-redux'
 import reducers from './reducers'
 import App from './components/App'
-
+import { composeWithDevTools } from 'redux-devtools-extension'
 import './index.css'
 
 // Create a history of your choosing (we're using a browser history in this case)
@@ -31,7 +31,9 @@ const store = createStore(
     ...reducers,
     router: routerReducer,
   }),
-  applyMiddleware(middleware)
+  composeWithDevTools(
+    applyMiddleware(middleware)
+  )
 )
 
 // A bunch of setup containers to to get redux
