@@ -62,5 +62,4 @@ function mapStateToProps(state) {
     authState: state.auth.state,
   }
 }
-
 export default connect(mapStateToProps)(App)
