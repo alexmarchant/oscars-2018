@@ -1,4 +1,4 @@
-import firebase from '../lib/firebase'
+import { auth } from '../lib/firebase'
 
 const AuthActions = {
   DID_LOG_IN: 'DID_LOG_IN',
@@ -21,7 +21,7 @@ export function didLogOut() {
 }
 
 export function requestLogOut() {
-  firebase.auth().signOut()
+  auth.signOut()
   return {
     type: AuthActions.REQUEST_LOG_OUT,
   }

@@ -1,0 +1,978 @@
+{
+  "categories": [
+    {
+      "title": "Best Picture",
+      "nominees": [
+        {
+          "name": "Call Me by Your Name",
+          "image": "100000005553710",
+          "review": "https:\/\/www.nytimes.com\/2017\/11\/22\/movies\/call-me-by-your-name-review-armie-hammer.html",
+          "film": "Call Me by Your Name",
+          "winner": false
+        },
+        {
+          "name": "Darkest Hour",
+          "image": "100000005564471",
+          "review": "https:\/\/www.nytimes.com\/2017\/11\/21\/movies\/darkest-hour-review-gary-oldman.html",
+          "film": "Darkest Hour",
+          "winner": false
+        },
+        {
+          "name": "Dunkirk",
+          "image": "100000005693893",
+          "review": "https:\/\/www.nytimes.com\/2017\/07\/20\/movies\/dunkirk-review-christopher-nolan.html",
+          "film": "Dunkirk",
+          "winner": false
+        },
+        {
+          "name": "Get Out",
+          "image": "100000004950806",
+          "review": "https:\/\/www.nytimes.com\/2017\/02\/23\/movies\/get-out-review-jordan-peele.html",
+          "film": "Get Out",
+          "winner": false
+        },
+        {
+          "name": "Lady Bird",
+          "image": "100000005693892",
+          "review": "https:\/\/www.nytimes.com\/2017\/10\/31\/movies\/lady-bird-review-greta-gerwig-saoirse-ronan.html",
+          "film": "Lady Bird",
+          "winner": false
+        },
+        {
+          "name": "Phantom Thread",
+          "image": "100000005621846",
+          "review": "https:\/\/www.nytimes.com\/2017\/12\/24\/movies\/phantom-thread-review-daniel-day-lewis.html",
+          "film": "Phantom Thread",
+          "winner": false
+        },
+        {
+          "name": "The Post",
+          "image": "100000005616389",
+          "review": "https:\/\/www.nytimes.com\/2017\/12\/21\/movies\/the-post-review-steven-spielberg-tom-hanks-meryl-streep.html",
+          "film": "The Post",
+          "winner": false
+        },
+        {
+          "name": "The Shape of Water",
+          "image": "100000005651615",
+          "review": "https:\/\/www.nytimes.com\/2017\/11\/30\/movies\/the-shape-of-water-review-guillermo-del-toro.html",
+          "film": "The Shape of Water",
+          "winner": false
+        },
+        {
+          "name": "Three Billboards Outside Ebbing, Missouri",
+          "image": "100000005693667",
+          "review": "https:\/\/www.nytimes.com\/2017\/11\/08\/movies\/review-three-billboards-outside-ebbing-missouri-martin-mcdonagh.html",
+          "film": "Three Billboards Outside Ebbing, Missouri",
+          "winner": false
+        }
+      ]
+    },
+    {
+      "title": "Director",
+      "nominees": [
+        {
+          "name": "Paul Thomas Anderson",
+          "image": "100000005696962",
+          "review": "https:\/\/www.nytimes.com\/2017\/12\/24\/movies\/phantom-thread-review-daniel-day-lewis.html",
+          "film": "Phantom Thread",
+          "winner": false
+        },
+        {
+          "name": "Guillermo del Toro",
+          "image": "100000005693735",
+          "review": "https:\/\/www.nytimes.com\/2017\/11\/30\/movies\/the-shape-of-water-review-guillermo-del-toro.html",
+          "film": "The Shape of Water",
+          "winner": false
+        },
+        {
+          "name": "Greta Gerwig",
+          "image": "100000005693734",
+          "review": "https:\/\/www.nytimes.com\/2017\/10\/31\/movies\/lady-bird-review-greta-gerwig-saoirse-ronan.html",
+          "film": "Lady Bird",
+          "winner": false
+        },
+        {
+          "name": "Christopher Nolan",
+          "image": "100000005693765",
+          "review": "https:\/\/www.nytimes.com\/2017\/07\/20\/movies\/dunkirk-review-christopher-nolan.html",
+          "film": "Dunkirk",
+          "winner": false
+        },
+        {
+          "name": "Jordan Peele",
+          "image": "100000005693764",
+          "review": "https:\/\/www.nytimes.com\/2017\/02\/23\/movies\/get-out-review-jordan-peele.html",
+          "film": "Get Out",
+          "winner": false
+        }
+      ]
+    },
+    {
+      "title": "Actor in a Leading Role",
+      "nominees": [
+        {
+          "name": "Timoth\u00e9e Chalamet",
+          "image": "100000005693699",
+          "review": "https:\/\/www.nytimes.com\/2017\/11\/22\/movies\/call-me-by-your-name-review-armie-hammer.html",
+          "film": "Call Me by Your Name",
+          "winner": false
+        },
+        {
+          "name": "Daniel Day-Lewis",
+          "image": "100000005693703",
+          "review": "https:\/\/www.nytimes.com\/2017\/12\/24\/movies\/phantom-thread-review-daniel-day-lewis.html",
+          "film": "Phantom Thread",
+          "winner": false
+        },
+        {
+          "name": "Daniel Kaluuya",
+          "image": "100000005693660",
+          "review": "https:\/\/www.nytimes.com\/2017\/02\/23\/movies\/get-out-review-jordan-peele.html",
+          "film": "Get Out",
+          "winner": false
+        },
+        {
+          "name": "Gary Oldman",
+          "image": "100000005693702",
+          "review": "https:\/\/www.nytimes.com\/2017\/11\/21\/movies\/darkest-hour-review-gary-oldman.html",
+          "film": "Darkest Hour",
+          "winner": false
+        },
+        {
+          "name": "Denzel Washington",
+          "image": "100000005554527",
+          "review": "https:\/\/www.nytimes.com\/2017\/11\/16\/movies\/roman-j-israel-review-denzel-washington.html",
+          "film": "Roman J. Israel, Esq.",
+          "winner": false
+        }
+      ]
+    },
+    {
+      "title": "Actress in a Leading Role",
+      "nominees": [
+        {
+          "name": "Sally Hawkins",
+          "image": "100000005693726",
+          "review": "https:\/\/www.nytimes.com\/2017\/11\/30\/movies\/the-shape-of-water-review-guillermo-del-toro.html",
+          "film": "The Shape of Water",
+          "winner": false
+        },
+        {
+          "name": "Frances McDormand",
+          "image": "100000005693667",
+          "review": "https:\/\/www.nytimes.com\/2017\/11\/08\/movies\/review-three-billboards-outside-ebbing-missouri-martin-mcdonagh.html",
+          "film": "Three Billboards Outside Ebbing, Missouri",
+          "winner": false
+        },
+        {
+          "name": "Margot Robbie",
+          "image": "100000005693669",
+          "review": "https:\/\/www.nytimes.com\/2017\/12\/06\/movies\/i-tonya-review-margot-robbie.html",
+          "film": "I, Tonya",
+          "winner": false
+        },
+        {
+          "name": "Saoirse Ronan",
+          "image": "100000005693666",
+          "review": "https:\/\/www.nytimes.com\/2017\/10\/31\/movies\/lady-bird-review-greta-gerwig-saoirse-ronan.html",
+          "film": "Lady Bird",
+          "winner": false
+        },
+        {
+          "name": "Meryl Streep",
+          "image": "100000005693672",
+          "review": "https:\/\/www.nytimes.com\/2017\/12\/21\/movies\/the-post-review-steven-spielberg-tom-hanks-meryl-streep.html",
+          "film": "The Post",
+          "winner": false
+        }
+      ]
+    },
+    {
+      "title": "Actor in a Supporting Role",
+      "nominees": [
+        {
+          "name": "Willem Dafoe",
+          "image": "100000005693822",
+          "review": "https:\/\/www.nytimes.com\/2017\/10\/05\/movies\/the-florida-project-review-sean-baker-willem-dafoe.html",
+          "film": "The Florida Project",
+          "winner": false
+        },
+        {
+          "name": "Woody Harrelson",
+          "image": "100000005696945",
+          "review": "https:\/\/www.nytimes.com\/2017\/11\/08\/movies\/review-three-billboards-outside-ebbing-missouri-martin-mcdonagh.html",
+          "film": "Three Billboards Outside Ebbing, Missouri",
+          "winner": false
+        },
+        {
+          "name": "Richard Jenkins",
+          "image": "100000005693794",
+          "review": "https:\/\/www.nytimes.com\/2017\/11\/30\/movies\/the-shape-of-water-review-guillermo-del-toro.html",
+          "film": "The Shape of Water",
+          "winner": false
+        },
+        {
+          "name": "Christopher Plummer",
+          "image": "100000005693796",
+          "review": "https:\/\/www.nytimes.com\/2017\/12\/24\/movies\/all-the-money-in-the-world-review-christopher-plummer.html",
+          "film": "All the Money in the World",
+          "winner": false
+        },
+        {
+          "name": "Sam Rockwell",
+          "image": "100000005693799",
+          "review": "https:\/\/www.nytimes.com\/2017\/11\/08\/movies\/review-three-billboards-outside-ebbing-missouri-martin-mcdonagh.html",
+          "film": "Three Billboards Outside Ebbing, Missouri",
+          "winner": false
+        }
+      ]
+    },
+    {
+      "title": "Actress in a Supporting Role",
+      "nominees": [
+        {
+          "name": "Mary J. Blige",
+          "image": "100000005693787",
+          "review": "https:\/\/www.nytimes.com\/2017\/11\/16\/movies\/mudbound-review-dee-rees.html",
+          "film": "Mudbound",
+          "winner": false
+        },
+        {
+          "name": "Allison Janney",
+          "image": "100000005693788",
+          "review": "https:\/\/www.nytimes.com\/2017\/12\/06\/movies\/i-tonya-review-margot-robbie.html",
+          "film": "I, Tonya",
+          "winner": false
+        },
+        {
+          "name": "Lesley Manville",
+          "image": "100000005696941",
+          "review": "https:\/\/www.nytimes.com\/2017\/12\/24\/movies\/phantom-thread-review-daniel-day-lewis.html",
+          "film": "Phantom Thread",
+          "winner": false
+        },
+        {
+          "name": "Laurie Metcalf",
+          "image": "100000005693785",
+          "review": "https:\/\/www.nytimes.com\/2017\/10\/31\/movies\/lady-bird-review-greta-gerwig-saoirse-ronan.html",
+          "film": "Lady Bird",
+          "winner": false
+        },
+        {
+          "name": "Octavia Spencer",
+          "image": "100000005693843",
+          "review": "https:\/\/www.nytimes.com\/2017\/11\/30\/movies\/the-shape-of-water-review-guillermo-del-toro.html",
+          "film": "The Shape of Water",
+          "winner": false
+        }
+      ]
+    },
+    {
+      "title": "Original Screenplay",
+      "nominees": [
+        {
+          "name": "The Big Sick",
+          "image": "100000005693904",
+          "review": "https:\/\/www.nytimes.com\/2017\/06\/22\/movies\/the-big-sick-review-kumail-nanjiani.html",
+          "film": "The Big Sick",
+          "winner": false
+        },
+        {
+          "name": "Get Out",
+          "image": "100000004950806",
+          "review": "https:\/\/www.nytimes.com\/2017\/02\/23\/movies\/get-out-review-jordan-peele.html",
+          "film": "Get Out",
+          "winner": false
+        },
+        {
+          "name": "Lady Bird",
+          "image": "100000005693892",
+          "review": "https:\/\/www.nytimes.com\/2017\/10\/31\/movies\/lady-bird-review-greta-gerwig-saoirse-ronan.html",
+          "film": "Lady Bird",
+          "winner": false
+        },
+        {
+          "name": "The Shape of Water",
+          "image": "100000005651615",
+          "review": "https:\/\/www.nytimes.com\/2017\/11\/30\/movies\/the-shape-of-water-review-guillermo-del-toro.html",
+          "film": "The Shape of Water",
+          "winner": false
+        },
+        {
+          "name": "Three Billboards Outside Ebbing, Missouri",
+          "image": "100000005693667",
+          "review": "https:\/\/www.nytimes.com\/2017\/11\/08\/movies\/review-three-billboards-outside-ebbing-missouri-martin-mcdonagh.html",
+          "film": "Three Billboards Outside Ebbing, Missouri",
+          "winner": false
+        }
+      ]
+    },
+    {
+      "title": "Adapted Screenplay",
+      "nominees": [
+        {
+          "name": "Call Me by Your Name",
+          "image": "100000005553710",
+          "review": "https:\/\/www.nytimes.com\/2017\/11\/22\/movies\/call-me-by-your-name-review-armie-hammer.html",
+          "film": "Call Me by Your Name",
+          "winner": false
+        },
+        {
+          "name": "The Disaster Artist",
+          "image": null,
+          "review": "https:\/\/www.nytimes.com\/2017\/11\/30\/movies\/the-disaster-artist-review-ames-franco-tommy-wiseau.html",
+          "film": "The Disaster Artist",
+          "winner": false
+        },
+        {
+          "name": "Logan",
+          "image": null,
+          "review": "https:\/\/www.nytimes.com\/2017\/03\/02\/movies\/logan-review-hugh-jackman-wolverine-x-men.html",
+          "film": "Logan",
+          "winner": false
+        },
+        {
+          "name": "Molly's Game",
+          "image": null,
+          "review": "https:\/\/www.nytimes.com\/2017\/12\/24\/movies\/mollys-game-review-aaron-sorkin-jessica-chastain.html",
+          "film": "Molly's Game",
+          "winner": false
+        },
+        {
+          "name": "Mudbound",
+          "image": "100000005555177",
+          "review": "https:\/\/www.nytimes.com\/2017\/11\/16\/movies\/mudbound-review-dee-rees.html",
+          "film": "Mudbound",
+          "winner": false
+        }
+      ]
+    },
+    {
+      "title": "Foreign Language Film",
+      "nominees": [
+        {
+          "name": "A Fantastic Woman",
+          "image": null,
+          "review": "https:\/\/www.nytimes.com\/2017\/11\/15\/movies\/a-fantastic-woman-review.html",
+          "film": "Chile",
+          "winner": false
+        },
+        {
+          "name": "The Insult",
+          "image": null,
+          "review": "https:\/\/www.nytimes.com\/2018\/01\/10\/movies\/the-insult-review-lebanon.html",
+          "film": "Lebanon",
+          "winner": false
+        },
+        {
+          "name": "Loveless",
+          "image": null,
+          "review": "https:\/\/www.nytimes.com\/2017\/11\/30\/movies\/loveless-review-andrey-zvyagintsev.html",
+          "film": "Russia",
+          "winner": false
+        },
+        {
+          "name": "On Body and Soul",
+          "image": null,
+          "review": "https:\/\/www.nytimes.com\/2015\/04\/24\/movies\/review-body-and-soul-a-documentary-looks-at-jews-ties-to-the-land-of-israel.html",
+          "film": "Hungary",
+          "winner": false
+        },
+        {
+          "name": "The Square",
+          "image": null,
+          "review": "https:\/\/www.nytimes.com\/2017\/10\/26\/movies\/the-square-review-elisabeth-moss.html",
+          "film": "Sweden",
+          "winner": false
+        }
+      ]
+    },
+    {
+      "title": "Animated Feature",
+      "nominees": [
+        {
+          "name": "The Boss Baby",
+          "image": null,
+          "review": "https:\/\/www.nytimes.com\/2017\/03\/30\/movies\/the-boss-baby-review-alec-baldwin.html",
+          "film": "The Boss Baby",
+          "winner": false
+        },
+        {
+          "name": "The Breadwinner",
+          "image": null,
+          "review": "https:\/\/www.nytimes.com\/2017\/11\/16\/movies\/the-breadwinner-review.html",
+          "film": "The Breadwinner",
+          "winner": false
+        },
+        {
+          "name": "Coco",
+          "image": null,
+          "review": "https:\/\/www.nytimes.com\/2017\/11\/21\/movies\/coco-review-pixar-disney.html",
+          "film": "Coco",
+          "winner": false
+        },
+        {
+          "name": "Ferdinand",
+          "image": null,
+          "review": "https:\/\/www.nytimes.com\/2017\/12\/14\/movies\/ferdinand-review.html",
+          "film": "Ferdinand",
+          "winner": false
+        },
+        {
+          "name": "Loving Vincent",
+          "image": null,
+          "review": "https:\/\/www.nytimes.com\/2017\/09\/21\/movies\/loving-vincent-review-van-gogh.html",
+          "film": "Loving Vincent",
+          "winner": false
+        }
+      ]
+    },
+    {
+      "title": "Sound Editing",
+      "nominees": [
+        {
+          "name": "Baby Driver",
+          "image": null,
+          "review": "https:\/\/www.nytimes.com\/2017\/06\/27\/movies\/baby-driver-review-edgar-wright-ansel-elgort.html",
+          "film": "Baby Driver",
+          "winner": false
+        },
+        {
+          "name": "Blade Runner 2049",
+          "image": null,
+          "review": "https:\/\/www.nytimes.com\/2017\/10\/02\/movies\/blade-runner-2049-review-ryan-gosling-harrison-ford.html",
+          "film": "Blade Runner 2049",
+          "winner": false
+        },
+        {
+          "name": "Dunkirk",
+          "image": "100000005693893",
+          "review": "https:\/\/www.nytimes.com\/2017\/07\/20\/movies\/dunkirk-review-christopher-nolan.html",
+          "film": "Dunkirk",
+          "winner": false
+        },
+        {
+          "name": "The Shape of Water",
+          "image": "100000005651615",
+          "review": "https:\/\/www.nytimes.com\/2017\/11\/30\/movies\/the-shape-of-water-review-guillermo-del-toro.html",
+          "film": "The Shape of Water",
+          "winner": false
+        },
+        {
+          "name": "Star Wars: The Last Jedi",
+          "image": null,
+          "review": "https:\/\/www.nytimes.com\/2017\/12\/12\/movies\/star-wars-the-last-jedi-review.html",
+          "film": "Star Wars: The Last Jedi",
+          "winner": false
+        }
+      ]
+    },
+    {
+      "title": "Visual Effects",
+      "nominees": [
+        {
+          "name": "Blade Runner 2049",
+          "image": null,
+          "review": "https:\/\/www.nytimes.com\/2017\/10\/02\/movies\/blade-runner-2049-review-ryan-gosling-harrison-ford.html",
+          "film": "Blade Runner 2049",
+          "winner": false
+        },
+        {
+          "name": "Guardians of the Galaxy Vol. 2",
+          "image": null,
+          "review": "https:\/\/www.nytimes.com\/2017\/05\/04\/movies\/guardians-of-the-galaxy-2-review-chris-pratt.html",
+          "film": "Guardians of the Galaxy Vol. 2",
+          "winner": false
+        },
+        {
+          "name": "Kong: Skull Island",
+          "image": null,
+          "review": "https:\/\/www.nytimes.com\/2017\/03\/09\/movies\/kong-skull-island-review-brie-larson.html",
+          "film": "Kong: Skull Island",
+          "winner": false
+        },
+        {
+          "name": "Star Wars: The Last Jedi",
+          "image": null,
+          "review": "https:\/\/www.nytimes.com\/2017\/12\/12\/movies\/star-wars-the-last-jedi-review.html",
+          "film": "Star Wars: The Last Jedi",
+          "winner": false
+        },
+        {
+          "name": "War for the Planet of the Apes",
+          "image": null,
+          "review": "https:\/\/www.nytimes.com\/2017\/07\/12\/movies\/war-for-the-planet-of-the-apes-review.html",
+          "film": "War for the Planet of the Apes",
+          "winner": false
+        }
+      ]
+    },
+    {
+      "title": "Film Editing",
+      "nominees": [
+        {
+          "name": "Baby Driver",
+          "image": null,
+          "review": "https:\/\/www.nytimes.com\/2017\/06\/27\/movies\/baby-driver-review-edgar-wright-ansel-elgort.html",
+          "film": "Baby Driver",
+          "winner": false
+        },
+        {
+          "name": "Dunkirk",
+          "image": "100000005693893",
+          "review": "https:\/\/www.nytimes.com\/2017\/07\/20\/movies\/dunkirk-review-christopher-nolan.html",
+          "film": "Dunkirk",
+          "winner": false
+        },
+        {
+          "name": "I, Tonya",
+          "image": "100000005693891",
+          "review": "https:\/\/www.nytimes.com\/2017\/12\/06\/movies\/i-tonya-review-margot-robbie.html",
+          "film": "I, Tonya",
+          "winner": false
+        },
+        {
+          "name": "The Shape of Water",
+          "image": "100000005651615",
+          "review": "https:\/\/www.nytimes.com\/2017\/11\/30\/movies\/the-shape-of-water-review-guillermo-del-toro.html",
+          "film": "The Shape of Water",
+          "winner": false
+        },
+        {
+          "name": "Three Billboards Outside Ebbing, Missouri",
+          "image": "100000005693667",
+          "review": "https:\/\/www.nytimes.com\/2017\/11\/08\/movies\/review-three-billboards-outside-ebbing-missouri-martin-mcdonagh.html",
+          "film": "Three Billboards Outside Ebbing, Missouri",
+          "winner": false
+        }
+      ]
+    },
+    {
+      "title": "Short Film, Animated",
+      "nominees": [
+        {
+          "name": "Dear Basketball",
+          "image": null,
+          "review": "https:\/\/www.nytimes.com\/2017\/12\/28\/movies\/animation-show-of-shows-quad-cinema.html",
+          "film": "Dear Basketball",
+          "winner": false
+        },
+        {
+          "name": "Garden Party",
+          "image": null,
+          "review": null,
+          "film": "Garden Party",
+          "winner": false
+        },
+        {
+          "name": "Lou",
+          "image": null,
+          "review": null,
+          "film": "Lou",
+          "winner": false
+        },
+        {
+          "name": "Negative Space",
+          "image": null,
+          "review": null,
+          "film": "Negative Space",
+          "winner": false
+        },
+        {
+          "name": "Revolting Rhymes",
+          "image": null,
+          "review": null,
+          "film": "Revolting Rhymes",
+          "winner": false
+        }
+      ]
+    },
+    {
+      "title": "Short Film, Live Action",
+      "nominees": [
+        {
+          "name": "DeKalb Elementary",
+          "image": null,
+          "review": null,
+          "film": "DeKalb Elementary",
+          "winner": false
+        },
+        {
+          "name": "The Eleven O\u2019Clock",
+          "image": null,
+          "review": null,
+          "film": "The Eleven O\u2019Clock",
+          "winner": false
+        },
+        {
+          "name": "My Nephew Emmett",
+          "image": null,
+          "review": null,
+          "film": "My Nephew Emmett",
+          "winner": false
+        },
+        {
+          "name": "The Silent Child",
+          "image": null,
+          "review": null,
+          "film": "The Silent Child",
+          "winner": false
+        },
+        {
+          "name": "Watu Wote\/All of Us",
+          "image": null,
+          "review": null,
+          "film": "Watu Wote\/All of Us",
+          "winner": false
+        }
+      ]
+    },
+    {
+      "title": "Documentary Short Subject",
+      "nominees": [
+        {
+          "name": "Edith+Eddie",
+          "image": null,
+          "review": null,
+          "film": "Edith+Eddie",
+          "winner": false
+        },
+        {
+          "name": "Heaven Is a Traffic Jam on the 405",
+          "image": null,
+          "review": null,
+          "film": "Heaven Is a Traffic Jam on the 405",
+          "winner": false
+        },
+        {
+          "name": "Heroin(e)",
+          "image": null,
+          "review": null,
+          "film": "Heroin(e)",
+          "winner": false
+        },
+        {
+          "name": "Knife Skills",
+          "image": null,
+          "review": null,
+          "film": "Knife Skills",
+          "winner": false
+        },
+        {
+          "name": "Traffic Stop",
+          "image": null,
+          "review": null,
+          "film": "Traffic Stop",
+          "winner": false
+        }
+      ]
+    },
+    {
+      "title": "Original Score",
+      "nominees": [
+        {
+          "name": "Dunkirk",
+          "image": "100000005693893",
+          "review": "https:\/\/www.nytimes.com\/2017\/07\/20\/movies\/dunkirk-review-christopher-nolan.html",
+          "film": "Dunkirk",
+          "winner": false
+        },
+        {
+          "name": "Phantom Thread",
+          "image": "100000005621846",
+          "review": "https:\/\/www.nytimes.com\/2017\/12\/24\/movies\/phantom-thread-review-daniel-day-lewis.html",
+          "film": "Phantom Thread",
+          "winner": false
+        },
+        {
+          "name": "The Shape of Water",
+          "image": "100000005651615",
+          "review": "https:\/\/www.nytimes.com\/2017\/11\/30\/movies\/the-shape-of-water-review-guillermo-del-toro.html",
+          "film": "The Shape of Water",
+          "winner": false
+        },
+        {
+          "name": "Star Wars: The Last Jedi",
+          "image": null,
+          "review": "https:\/\/www.nytimes.com\/2017\/12\/12\/movies\/star-wars-the-last-jedi-review.html",
+          "film": "Star Wars: The Last Jedi",
+          "winner": false
+        },
+        {
+          "name": "Three Billboards Outside Ebbing, Missouri",
+          "image": "100000005693667",
+          "review": "https:\/\/www.nytimes.com\/2016\/12\/20\/movies\/passengers-review-jennifer-lawrence-chris-pratt.html",
+          "film": "Three Billboards Outside Ebbing, Missouri",
+          "winner": false
+        }
+      ]
+    },
+    {
+      "title": "Original Song",
+      "nominees": [
+        {
+          "name": "Mighty River",
+          "image": "",
+          "review": "",
+          "film": "Mudbound",
+          "winner": false
+        },
+        {
+          "name": "The Mystery of Love",
+          "image": "",
+          "review": "",
+          "film": "Call Me by Your Name",
+          "winner": false
+        },
+        {
+          "name": "Remember Me",
+          "image": "",
+          "review": "",
+          "film": "Coco",
+          "winner": false
+        },
+        {
+          "name": "Stand Up for Something",
+          "image": "",
+          "review": "",
+          "film": "Marshall",
+          "winner": false
+        },
+        {
+          "name": "This Is Me",
+          "image": "",
+          "review": "",
+          "film": "The Greatest Showman",
+          "winner": false
+        }
+      ]
+    },
+    {
+      "title": "Production Design",
+      "nominees": [
+        {
+          "name": "Beauty and the Beast",
+          "image": null,
+          "review": "https:\/\/www.nytimes.com\/2017\/03\/03\/movies\/beauty-and-the-beast-review.html",
+          "film": "Beauty and the Beast",
+          "winner": false
+        },
+        {
+          "name": "Blade Runner 2049",
+          "image": null,
+          "review": "https:\/\/www.nytimes.com\/2017\/10\/02\/movies\/blade-runner-2049-review-ryan-gosling-harrison-ford.html",
+          "film": "Blade Runner 2049",
+          "winner": false
+        },
+        {
+          "name": "Darkest Hour",
+          "image": "100000005564471",
+          "review": "https:\/\/www.nytimes.com\/2016\/12\/20\/movies\/passengers-review-jennifer-lawrence-chris-pratt.html",
+          "film": "Darkest Hour",
+          "winner": false
+        },
+        {
+          "name": "Dunkirk",
+          "image": "100000005693893",
+          "review": "https:\/\/www.nytimes.com\/2017\/07\/20\/movies\/dunkirk-review-christopher-nolan.html",
+          "film": "Dunkirk",
+          "winner": false
+        },
+        {
+          "name": "The Shape of Water",
+          "image": "100000005651615",
+          "review": "https:\/\/www.nytimes.com\/2017\/11\/30\/movies\/the-shape-of-water-review-guillermo-del-toro.html",
+          "film": "The Shape of Water",
+          "winner": false
+        }
+      ]
+    },
+    {
+      "title": "Cinematography",
+      "nominees": [
+        {
+          "name": "Blade Runner 2049",
+          "image": null,
+          "review": "https:\/\/www.nytimes.com\/2017\/10\/02\/movies\/blade-runner-2049-review-ryan-gosling-harrison-ford.html",
+          "film": "Blade Runner 2049",
+          "winner": false
+        },
+        {
+          "name": "Darkest Hour",
+          "image": "100000005564471",
+          "review": "https:\/\/www.nytimes.com\/2017\/11\/21\/movies\/darkest-hour-review-gary-oldman.html",
+          "film": "Darkest Hour",
+          "winner": false
+        },
+        {
+          "name": "Dunkirk",
+          "image": "100000005693893",
+          "review": "https:\/\/www.nytimes.com\/2017\/07\/20\/movies\/dunkirk-review-christopher-nolan.html",
+          "film": "Dunkirk",
+          "winner": false
+        },
+        {
+          "name": "Mudbound",
+          "image": "100000005555177",
+          "review": "https:\/\/www.nytimes.com\/2017\/11\/16\/movies\/mudbound-review-dee-rees.html",
+          "film": "Mudbound",
+          "winner": false
+        },
+        {
+          "name": "The Shape of Water",
+          "image": "100000005651615",
+          "review": "https:\/\/www.nytimes.com\/2017\/11\/30\/movies\/the-shape-of-water-review-guillermo-del-toro.html",
+          "film": "The Shape of Water",
+          "winner": false
+        }
+      ]
+    },
+    {
+      "title": "Costume Design",
+      "nominees": [
+        {
+          "name": "Beauty and the Beast",
+          "image": null,
+          "review": "https:\/\/www.nytimes.com\/2017\/03\/03\/movies\/beauty-and-the-beast-review.html",
+          "film": "Beauty and the Beast",
+          "winner": false
+        },
+        {
+          "name": "Darkest Hour",
+          "image": "100000005564471",
+          "review": "https:\/\/www.nytimes.com\/2017\/11\/21\/movies\/darkest-hour-review-gary-oldman.html",
+          "film": "Darkest Hour",
+          "winner": false
+        },
+        {
+          "name": "Phantom Thread",
+          "image": "100000005621846",
+          "review": "https:\/\/www.nytimes.com\/2017\/12\/24\/movies\/phantom-thread-review-daniel-day-lewis.html",
+          "film": "Phantom Thread",
+          "winner": false
+        },
+        {
+          "name": "The Shape of Water",
+          "image": "100000005651615",
+          "review": "https:\/\/www.nytimes.com\/2017\/11\/30\/movies\/the-shape-of-water-review-guillermo-del-toro.html",
+          "film": "The Shape of Water",
+          "winner": false
+        },
+        {
+          "name": "Victoria and Abdul",
+          "image": null,
+          "review": "https:\/\/www.nytimes.com\/2017\/09\/21\/movies\/victoria-and-abdul-review-judi-dench.html",
+          "film": "Victoria and Abdul",
+          "winner": false
+        }
+      ]
+    },
+    {
+      "title": "Makeup",
+      "nominees": [
+        {
+          "name": "Darkest Hour",
+          "image": "100000005564471",
+          "review": "https:\/\/www.nytimes.com\/2017\/11\/21\/movies\/darkest-hour-review-gary-oldman.html",
+          "film": "Darkest Hour",
+          "winner": false
+        },
+        {
+          "name": "Victoria and Abdul",
+          "image": null,
+          "review": "https:\/\/www.nytimes.com\/2017\/09\/21\/movies\/victoria-and-abdul-review-judi-dench.html",
+          "film": "Victoria and Abdul",
+          "winner": false
+        },
+        {
+          "name": "Wonder",
+          "image": null,
+          "review": "https:\/\/www.nytimes.com\/2017\/11\/16\/movies\/wonder-review-jacob-tremblay-julia-roberts-owen-wilson.html",
+          "film": "Wonder",
+          "winner": false
+        }
+      ]
+    },
+    {
+      "title": "Documentary Feature",
+      "nominees": [
+        {
+          "name": "Abacus: Small Enough to Jail",
+          "image": null,
+          "review": "https:\/\/www.nytimes.com\/2017\/05\/18\/movies\/abacus-small-enough-to-jail-review.html",
+          "film": "Abacus: Small Enough to Jail",
+          "winner": false
+        },
+        {
+          "name": "Faces Places",
+          "image": null,
+          "review": "https:\/\/www.nytimes.com\/2017\/10\/05\/movies\/review-faces-places-agnes-varda-jr-travel-in-the-present-glancing-at-the-past.html",
+          "film": "Faces Places",
+          "winner": false
+        },
+        {
+          "name": "Icarus",
+          "image": null,
+          "review": "https:\/\/www.nytimes.com\/2017\/08\/03\/movies\/icarus-review.html",
+          "film": "Icarus",
+          "winner": false
+        },
+        {
+          "name": "Last Men in Aleppo",
+          "image": null,
+          "review": "https:\/\/www.nytimes.com\/2017\/05\/02\/movies\/last-men-in-aleppo-review.html",
+          "film": "Last Men in Aleppo",
+          "winner": false
+        },
+        {
+          "name": "Strong Island",
+          "image": null,
+          "review": "https:\/\/www.nytimes.com\/2017\/09\/14\/movies\/strong-island-review.html",
+          "film": "Strong Island",
+          "winner": false
+        }
+      ]
+    },
+    {
+      "title": "Sound Mixing",
+      "nominees": [
+        {
+          "name": "Baby Driver",
+          "image": null,
+          "review": "https:\/\/www.nytimes.com\/2017\/06\/27\/movies\/baby-driver-review-edgar-wright-ansel-elgort.html",
+          "film": "Baby Driver",
+          "winner": false
+        },
+        {
+          "name": "Blade Runner 2049",
+          "image": null,
+          "review": "https:\/\/www.nytimes.com\/2017\/10\/02\/movies\/blade-runner-2049-review-ryan-gosling-harrison-ford.html",
+          "film": "Blade Runner 2049",
+          "winner": false
+        },
+        {
+          "name": "Dunkirk",
+          "image": "100000005693893",
+          "review": "https:\/\/www.nytimes.com\/2017\/07\/20\/movies\/dunkirk-review-christopher-nolan.html",
+          "film": "Dunkirk",
+          "winner": false
+        },
+        {
+          "name": "The Shape of Water",
+          "image": "100000005651615",
+          "review": "https:\/\/www.nytimes.com\/2017\/11\/30\/movies\/the-shape-of-water-review-guillermo-del-toro.html",
+          "film": "The Shape of Water",
+          "winner": false
+        },
+        {
+          "name": "Star Wars: The Last Jedi",
+          "image": null,
+          "review": "https:\/\/www.nytimes.com\/2016\/01\/15\/movies\/review-in-michael-bays-13-hours-the-secret-soldiers-of-benghazi-clarity-isnt-the-objective.html",
+          "film": "Star Wars: The Last Jedi",
+          "winner": false
+        }
+      ]
+    }
+  ]
+}

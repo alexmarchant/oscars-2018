@@ -13,6 +13,7 @@ import {
   routerReducer,
   routerMiddleware,
 } from 'react-router-redux'
+import thunkMiddleware from 'redux-thunk'
 import reducers from './reducers'
 import App from './components/App'
 import { composeWithDevTools } from 'redux-devtools-extension'
@@ -32,7 +33,7 @@ const store = createStore(
     router: routerReducer,
   }),
   composeWithDevTools(
-    applyMiddleware(middleware)
+    applyMiddleware(middleware, thunkMiddleware)
   )
 )
 

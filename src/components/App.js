@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { Route } from 'react-router'
-import firebase from '../lib/firebase'
+import { auth } from '../lib/firebase'
 import {
   didLogIn,
   didLogOut,
@@ -15,7 +15,7 @@ import LoggedIn from './LoggedIn'
 class App extends Component {
   componentDidMount() {
     // Constantly watch for user login/logout
-    firebase.auth().onAuthStateChanged((user) => {
+    auth.onAuthStateChanged((user) => {
       if (user) {
         this.props.dispatch(didLogIn(user))
       } else {

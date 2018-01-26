@@ -15,6 +15,12 @@ const config = {
 const firebase = FirebaseSDK.initializeApp(config)
 export default firebase
 
+const auth = firebase.auth()
+export { auth }
+
+const database = firebase.database()
+export { database }
+
 // FirebaseUI config.
 const uiConfig = {
   signInSuccessUrl: hostUrl,
@@ -24,8 +30,12 @@ const uiConfig = {
   }],
   tosUrl: hostUrl
 }
-const firebaseUI = new FirebaseUISDK.auth.AuthUI(firebase.auth())
+const firebaseUI = new FirebaseUISDK.auth.AuthUI(auth)
 
 export function renderFirebaseUI(containerID) {
   firebaseUI.start(containerID, uiConfig)
 }
+
+// Different refs for reading/writing to different parts of the database
+const winnersRef = database.ref('winners')
+export { winnersRef }
