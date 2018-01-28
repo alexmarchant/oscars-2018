@@ -6,6 +6,7 @@ import {
   stopListeningForChatMessagesUpdates,
   requestPushChatMessage,
 } from '../actions/chatMessages'
+import ping from '../media/ping.ogg'
 import './Chat.css'
 
 class Chat extends Component {
@@ -16,6 +17,8 @@ class Chat extends Component {
       inputText: '',
     }
 
+    this.completedFirstLoad = false
+    this.ping = new Audio(ping)
     this.onSubmitInputText = this.onSubmitInputText.bind(this)
   }
 
@@ -30,12 +33,27 @@ class Chat extends Component {
   }
 
   componentDidUpdate(prevProps, prevState) {
-    const newMessages = Object.keys(this.props.chatMessages).length >
-      Object.keys(prevProps.chatMessages).length
+    const newMessages = Object.keys(this.props.chatMessages)
+      .filter(key => !prevProps.chatMessages[key])
+      .map(key => this.props.chatMessages[key])
 
-    if (newMessages) {
-      this.scrollToBottom()
+    if (newMessages.length > 0) {
+      this.newMessagesAdded(newMessages)
     }
+  }
+
+  newMessagesAdded(newMessages) {
+    if (this.completedFirstLoad) {
+      if (
+        newMessages.filter(message => (
+          message.user.uid !== this.props.currentUser.uid
+        )).length > 0
+      ) {
+        this.ping.play()
+      }
+    }
+    this.completedFirstLoad = true
+    this.scrollToBottom()
   }
 
   scrollToBottom() {
