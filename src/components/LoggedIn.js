@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
-import { Route } from 'react-router'
+import { Route, Switch } from 'react-router'
 import { connect } from 'react-redux'
 import { requestLogOut } from '../actions/auth'
-import Ballot from './Ballot'
+import Tabs from './Tabs'
 import Admin from './Admin'
+import './LoggedIn.css'
 
 class LoggedIn extends Component {
   logOut = () => {
@@ -13,29 +13,25 @@ class LoggedIn extends Component {
 
   render() {
     return (
-      <div>
-        <header style={{
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'space-between',
-          borderBottom: '1px solid black',
-        }}>
-          <h1>Oscar Pool 2018</h1>
-          <div>
+      <div className="LoggedIn">
+        <div className="LoggedIn-header">
+          <div className="LoggedIn-headerTitle">
+            Oscar Pool 2018
+          </div>
+          <div className="LoggedIn-headerCurrentUser">
             {this.props.currentUser.displayName}
             <button onClick={this.logOut}>Log Out</button>
           </div>
-        </header>
-        <Route exact path="/" component={Ballot} />
-        <Route exact path="/admin" component={Admin} />
+        </div>
+        <div className="LoggedIn-body">
+          <Switch>
+            <Route path="/admin" component={Admin} />
+            <Route path="/" component={Tabs} />
+          </Switch>
+        </div>
       </div>
     )
   }
-}
-
-LoggedIn.propTypes = {
-  currentUser: PropTypes.object.isRequired,
-  dispatch: PropTypes.func.isRequired,
 }
 
 function mapStateToProps(state) {

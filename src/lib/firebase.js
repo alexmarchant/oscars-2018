@@ -15,11 +15,9 @@ const config = {
 const firebase = FirebaseSDK.initializeApp(config)
 export default firebase
 
-const auth = firebase.auth()
-export { auth }
+export const auth = firebase.auth()
 
-const database = firebase.database()
-export { database }
+export const database = firebase.database()
 
 // FirebaseUI config.
 const uiConfig = {
@@ -37,5 +35,5 @@ export function renderFirebaseUI(containerID) {
 }
 
 // Different refs for reading/writing to different parts of the database
-const winnersRef = database.ref('winners')
-export { winnersRef }
+export const winnersRef = database.ref('winners')
+export const chatMessagesRef = database.ref('chatMessages')

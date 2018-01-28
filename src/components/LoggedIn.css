@@ -1,0 +1,28 @@
+.LoggedIn {
+  --LoggedIn-headerHeight: 35px;
+  padding-top: var(--LoggedIn-headerHeight);
+}
+
+.LoggedIn-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid black;
+  font-size: 12px;
+  line-height: 1;
+  background-color: white;
+  z-index: 3000;
+  height: var(--LoggedIn-headerHeight);
+  padding: 0 12px;
+}
+
+.LoggedIn-headerTitle {
+  font-weight: bold;
+}
+
+.LoggedIn-body {
+  position: relative;
+}

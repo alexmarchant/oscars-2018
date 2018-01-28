@@ -1,0 +1,37 @@
+.Tabs {
+  --Tabs-buttonHeight: 35px;
+}
+
+.Tabs-body {
+  padding-top: var(--Tabs-buttonHeight);
+}
+
+.Tabs-buttons {
+  position: fixed;
+  top: var(--LoggedIn-headerHeight);
+  width: 100%;
+  display: flex;
+  background-color: white;
+  border-bottom: 1px solid black;
+}
+
+.Tabs-button {
+  display: block;
+  border: 0;
+  background: none;
+  padding: 0;
+  flex-grow: 1;
+  height: var(--Tabs-buttonHeight);
+  cursor: pointer;
+  font-size: 12px;
+  width: 50%;
+}
+
+.Tabs-button + .Tabs-button {
+  border-left: 1px solid black;
+}
+
+.Tabs-button.selected {
+  color: var(--App-blue);
+  font-weight: bold;
+}

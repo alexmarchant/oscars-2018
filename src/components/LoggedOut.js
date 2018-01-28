@@ -9,7 +9,10 @@ class LoggedOut extends Component {
 
   render() {
     return (
-      <div id="firebase-ui-root" />
+      <div
+        id="firebase-ui-root"
+        className="LoggedOut"
+      />
     )
   }
 }

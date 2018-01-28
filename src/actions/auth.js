@@ -1,28 +1,40 @@
 import { auth } from '../lib/firebase'
 
-const AuthActions = {
-  DID_LOG_IN: 'DID_LOG_IN',
-  DID_LOG_OUT: 'DID_LOG_OUT',
-  REQUEST_LOG_OUT: 'REQUEST_LOG_OUT',
+export const START_LISTENING_FOR_AUTH_UPDATE = 'START_LISTENING_FOR_AUTH_UPDATE'
+export function startListeningForAuthUpdate() {
+  return (dispatch) => {
+    dispatch(() => ({
+      type: START_LISTENING_FOR_AUTH_UPDATE,
+    }))
+    auth.onAuthStateChanged((user) => {
+      if (user) {
+        dispatch(receivedLogIn(user))
+      } else {
+        dispatch(receivedLogOut())
+      }
+    })
+  }
 }
-export { AuthActions }
 
-export function didLogIn(user) {
+export const RECEIVED_LOG_IN = 'RECEIVED_LOG_IN'
+export function receivedLogIn(user) {
   return {
-    type: AuthActions.DID_LOG_IN,
+    type: RECEIVED_LOG_IN,
     user: user,
   }
 }
 
-export function didLogOut() {
+export const RECEIVED_LOG_OUT = 'RECEIVED_LOG_OUT'
+export function receivedLogOut() {
   return {
-    type: AuthActions.DID_LOG_OUT,
+    type: RECEIVED_LOG_OUT,
   }
 }
 
+export const REQUEST_LOG_OUT = 'REQUEST_LOG_OUT'
 export function requestLogOut() {
   auth.signOut()
   return {
-    type: AuthActions.REQUEST_LOG_OUT,
+    type: REQUEST_LOG_OUT,
   }
 }

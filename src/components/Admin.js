@@ -2,28 +2,29 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import ballotData from '../data/ballot'
 import {
-  startListeningForWinners,
-  stopListeningForWinners,
-  setWinner,
+  startListeningForWinnersUpdates,
+  stopListeningForWinnersUpdates,
+  requestSetWinner,
 } from '../actions/winners'
+import './Admin.css'
 
 class Admin extends Component {
   componentDidMount() {
-      this.props.dispatch(startListeningForWinners())
+      this.props.dispatch(startListeningForWinnersUpdates())
   }
 
   componentWillUnmount() {
-      this.props.dispatch(stopListeningForWinners())
+      this.props.dispatch(stopListeningForWinnersUpdates())
   }
 
   onNomineeClick = (event, category, nominee) => {
     const winner = event.currentTarget.checked ? nominee : null
-    this.props.dispatch(setWinner(category, winner))
+    this.props.dispatch(requestSetWinner(category, winner))
   }
 
   render() {
     return (
-      <div>
+      <div className="Admin">
         <h1>Admin</h1>
         {ballotData.categories.map((category) => (
           <div key={category.title}>
@@ -38,7 +39,7 @@ class Admin extends Component {
                   />
                   {nominee.name}
                   {nominee.name !== nominee.film && (
-                    <span style={styles.film}> - {nominee.film}</span>
+                    <span className="Admin-nomineeFilm"> - {nominee.film}</span>
                   )}
                 </label>
               </div>
@@ -48,12 +49,6 @@ class Admin extends Component {
       </div>
     )
   }
-}
-
-const styles = {
-  film: {
-    color: '#777',
-  },
 }
 
 function mapStateToProps(state) {

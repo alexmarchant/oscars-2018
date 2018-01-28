@@ -1,27 +1,18 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { Route } from 'react-router'
-import { auth } from '../lib/firebase'
 import {
-  didLogIn,
-  didLogOut,
+  startListeningForAuthUpdate,
   requestLogOut,
 } from '../actions/auth'
 import { AuthState } from '../reducers/auth'
 import LoggedOut from './LoggedOut'
 import LoggedIn from './LoggedIn'
+import './App.css'
 
 class App extends Component {
   componentDidMount() {
-    // Constantly watch for user login/logout
-    auth.onAuthStateChanged((user) => {
-      if (user) {
-        this.props.dispatch(didLogIn(user))
-      } else {
-        this.props.dispatch(didLogOut())
-      }
-    })
+    this.props.dispatch(startListeningForAuthUpdate())
   }
 
   logOut = () => {
@@ -41,7 +32,7 @@ class App extends Component {
     }
 
     return (
-      <div>
+      <div className="App">
         {loading ? (
           <p>Loading...</p>
         ) : (
@@ -50,11 +41,6 @@ class App extends Component {
       </div>
     )
   }
-}
-
-App.propTypes = {
-  dispatch: PropTypes.func.isRequired,
-  authState: PropTypes.string.isRequired,
 }
 
 function mapStateToProps(state) {

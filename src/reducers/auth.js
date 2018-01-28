@@ -1,4 +1,4 @@
-import { AuthActions } from '../actions/auth'
+import { RECEIVED_LOG_IN, RECEIVED_LOG_OUT } from '../actions/auth'
 
 const AuthState = {
   LOADING: 'LOADING',
@@ -14,20 +14,18 @@ const defaultState = {
 
 const auth = (state = defaultState, action) => {
   switch (action.type) {
-    case AuthActions.DID_LOG_IN:
+    case RECEIVED_LOG_IN:
       return {
         ...state,
         currentUser: action.user,
         state: AuthState.LOGGED_IN,
       }
-    case AuthActions.DID_LOG_OUT:
+    case RECEIVED_LOG_OUT:
       return {
         ...state,
         currentUser: null,
         state: AuthState.LOGGED_OUT,
       }
-    case AuthActions.REQUEST_LOG_OUT:
-      return state
     default:
       return state
   }
