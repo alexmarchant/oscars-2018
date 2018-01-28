@@ -17,7 +17,11 @@ import thunkMiddleware from 'redux-thunk'
 import reducers from './reducers'
 import App from './components/App'
 import { composeWithDevTools } from 'redux-devtools-extension'
+import { unregister } from './registerServiceWorker'
 import './index.css'
+
+// Clear service workers
+unregister()
 
 // Create a history of your choosing (we're using a browser history in this case)
 const history = createHistory()
