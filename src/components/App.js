@@ -1,10 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { Route } from 'react-router'
-import {
-  startListeningForAuthUpdate,
-  requestLogOut,
-} from '../actions/auth'
+import { startListeningForAuthUpdate } from '../actions/auth'
 import { AuthState } from '../reducers/auth'
 import LoggedOut from './LoggedOut'
 import LoggedIn from './LoggedIn'
@@ -13,10 +10,6 @@ import './App.css'
 class App extends Component {
   componentDidMount() {
     this.props.dispatch(startListeningForAuthUpdate())
-  }
-
-  logOut = () => {
-    this.props.dispatch(requestLogOut())
   }
 
   render() {

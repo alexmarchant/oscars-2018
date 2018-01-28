@@ -1,11 +1,12 @@
 import { auth } from '../lib/firebase'
+import { requestUpdateUser } from './users'
 
 export const START_LISTENING_FOR_AUTH_UPDATE = 'START_LISTENING_FOR_AUTH_UPDATE'
 export function startListeningForAuthUpdate() {
   return (dispatch) => {
-    dispatch(() => ({
+    dispatch({
       type: START_LISTENING_FOR_AUTH_UPDATE,
-    }))
+    })
     auth.onAuthStateChanged((user) => {
       if (user) {
         dispatch(receivedLogIn(user))
@@ -18,9 +19,12 @@ export function startListeningForAuthUpdate() {
 
 export const RECEIVED_LOG_IN = 'RECEIVED_LOG_IN'
 export function receivedLogIn(user) {
-  return {
-    type: RECEIVED_LOG_IN,
-    user: user,
+  return (dispatch) => {
+    dispatch({
+      type: RECEIVED_LOG_IN,
+      user: user,
+    })
+    dispatch(requestUpdateUser(user))
   }
 }
 

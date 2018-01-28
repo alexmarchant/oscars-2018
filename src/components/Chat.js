@@ -52,24 +52,24 @@ class Chat extends Component {
     if (cleanedInputText.length < 1) { return }
 
     this.props.dispatch(requestPushChatMessage(
-      this.props.currentUser.displayName,
+      this.props.currentUser,
       cleanedInputText,
     ))
     this.setState({ inputText: '' })
   }
 
-  chatMessagesGroupedByAuthor() {
+  chatMessagesGroupedByUser() {
     return Object.keys(this.props.chatMessages)
       .reduce((accumulator, key) => {
         const message = this.props.chatMessages[key]
         message.key = key
         const lastGroup = accumulator[accumulator.length - 1]
 
-        if (lastGroup && lastGroup.author === message.author) {
+        if (lastGroup && lastGroup.user.uid === message.user.uid) {
           lastGroup.messages.push(message)
         } else {
           accumulator.push({
-            author: message.author,
+            user: message.user,
             messages: [message],
           })
         }
@@ -83,14 +83,14 @@ class Chat extends Component {
         <div
           className="Chat-messageList"
         >
-          {this.chatMessagesGroupedByAuthor().map((group, index) => (
+          {this.chatMessagesGroupedByUser().map((group, index) => (
             <div
               className={cx('Chat-group', {
-                mine: group.author === this.props.currentUser.displayName,
+                mine: group.user.uid === this.props.currentUser.uid,
               })}
               key={index}
             >
-              <div className="Chat-groupAuthor">{group.author}</div>
+              <div className="Chat-groupUser">{group.user.displayName}</div>
               <div className="Chat-groupMessages">
                 {group.messages.map(message => (
                   <div

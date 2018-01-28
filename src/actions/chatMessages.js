@@ -1,11 +1,11 @@
-import { chatMessagesRef } from '../lib/firebase'
+import { chatMessagesRef, TIMESTAMP } from '../lib/firebase'
 
 export const START_LISTENING_FOR_CHAT_MESSAGES_UPDATES = 'START_LISTENING_FOR_CHAT_MESSAGES_UPDATES'
 export function startListeningForChatMessagesUpdates() {
   return (dispatch) => {
-    dispatch(() => ({
+    dispatch({
       type: START_LISTENING_FOR_CHAT_MESSAGES_UPDATES,
-    }))
+    })
     chatMessagesRef
       .orderByKey()
       .limitToLast(50)
@@ -32,10 +32,14 @@ function receivedChatMessagesUpdate(chatMessages) {
 }
 
 export const REQUEST_PUSH_CHAT_MESSAGE = 'REQUEST_PUSH_CHAT_MESSAGE'
-export function requestPushChatMessage(author, body) {
+export function requestPushChatMessage(user, body) {
   chatMessagesRef.push().set({
-    author: author,
+    user: {
+      uid: user.uid,
+      displayName: user.displayName,
+    },
     body: body,
+    timestamp: TIMESTAMP,
   })
   return {
     type: REQUEST_PUSH_CHAT_MESSAGE,

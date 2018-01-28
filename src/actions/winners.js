@@ -3,9 +3,9 @@ import { winnersRef } from '../lib/firebase'
 export const START_LISTENING_FOR_WINNERS_UPDATES = 'START_LISTENING_FOR_WINNERS_UPDATES'
 export function startListeningForWinnersUpdates() {
   return (dispatch) => {
-    dispatch(() => ({
+    dispatch({
       type: START_LISTENING_FOR_WINNERS_UPDATES,
-    }))
+    })
     winnersRef.on('value', (snapshot) => {
       dispatch(receivedWinnersUpdate(snapshot.val()))
     })
@@ -28,11 +28,11 @@ function receivedWinnersUpdate(winners) {
   }
 }
 
-export const REQUEST_SET_WINNER = 'REQUEST_SET_WINNER'
-export function requestSetWinner(category, winner) {
-  const value = winner ? winner.name : null
-  winnersRef.update({ [category.title]: value })
+export const REQUEST_UPDATE_WINNERS_CATEGORY = 'REQUEST_UPDATE_WINNERS_CATEGORY'
+export function requestUpdateWinnersCategory(category, nominee) {
+  const value = nominee ? nominee.name : null
+  winnersRef.child(category.title).set(value)
   return {
-    type: REQUEST_SET_WINNER,
+    type: REQUEST_UPDATE_WINNERS_CATEGORY,
   }
 }

@@ -37,3 +37,10 @@ export function renderFirebaseUI(containerID) {
 // Different refs for reading/writing to different parts of the database
 export const winnersRef = database.ref('winners')
 export const chatMessagesRef = database.ref('chatMessages')
+export const usersRef = database.ref('users')
+export const makeUserRef = (user) => usersRef.child(user.uid)
+export const makeBallotRef = (user) => makeUserRef(user).child('ballot')
+
+// Contant that you can send to firebase that will be replaced
+// with a server populated value for the timestamp
+export const TIMESTAMP = FirebaseSDK.database.ServerValue.TIMESTAMP

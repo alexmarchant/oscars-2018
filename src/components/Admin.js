@@ -4,7 +4,7 @@ import ballotData from '../data/ballot'
 import {
   startListeningForWinnersUpdates,
   stopListeningForWinnersUpdates,
-  requestSetWinner,
+  requestUpdateWinnersCategory,
 } from '../actions/winners'
 import './Admin.css'
 
@@ -19,7 +19,7 @@ class Admin extends Component {
 
   onNomineeClick = (event, category, nominee) => {
     const winner = event.currentTarget.checked ? nominee : null
-    this.props.dispatch(requestSetWinner(category, winner))
+    this.props.dispatch(requestUpdateWinnersCategory(category, winner))
   }
 
   render() {
