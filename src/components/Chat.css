@@ -9,13 +9,6 @@
 
 .Chat-group {
   margin: 15px 0;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.Chat-group.mine {
-  align-items: flex-end;
 }
 
 .Chat-groupUser {
@@ -23,6 +16,11 @@
   font-size: 12px;
   padding: 0 12px;
   line-height: 1.1;
+  text-align: left;
+}
+
+.mine .Chat-groupUser {
+  text-align: right;
 }
 
 .Chat-groupMessages {
