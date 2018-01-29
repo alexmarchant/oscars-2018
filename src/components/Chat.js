@@ -78,7 +78,9 @@ class Chat extends Component {
     const cleanedInputText = this.state.inputText.trim()
     if (cleanedInputText.length < 1) { return }
 
-    document.activeElement.blur()
+    if (isMobile()) {
+      document.activeElement.blur()
+    }
 
     this.props.dispatch(requestPushChatMessage(
       this.props.currentUser,
@@ -163,7 +165,12 @@ class Chat extends Component {
             }}
             onBlur={e => {
               this.setState({inputtingText: false})
-              if (isMobile()) { this.scrollToBottom() }
+              if (isMobile()) {
+                const interval = setInterval(() => {
+                  this.scrollToBottom()
+                }, 30)
+                setTimeout(() => { clearInterval(interval) }, 500)
+              }
             }}
             onKeyUp={e => {
               if (e.keyCode === 13) {
