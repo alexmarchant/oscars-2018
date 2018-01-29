@@ -7,6 +7,10 @@
   padding: 0 12px;
 }
 
+.mobile.inputtingText .Chat-messageList {
+  display: none;
+}
+
 .Chat-group {
   margin: 15px 0;
 }
@@ -79,10 +83,13 @@
   bottom: 0;
   width: 100%;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   border-top: 1px solid black;
   background-color: white;
-  height: var(--Chat-inputFormHeight);
+}
+
+.mobile.inputtingText .Chat-inputForm {
+  position: inherit;
 }
 
 .Chat-input {
@@ -90,8 +97,22 @@
   border: 0;
   font-size: 16px;
   line-height: 1.5;
-  padding: calc((var(--Chat-inputFormHeight) - 26px) / 2) 0;
-  padding-left: 12px;
+  margin-left: 12px;
+  resize: none;
+  font-family: inherit;
+  margin-top: 6px;
+  height: calc(var(--Chat-inputFormHeight) - 12px);
+  background-color: #eee;
+  border-radius: 5px;
+  color: black;
+  padding: 3px 12px 0;
+  overflow: hidden;
+}
+
+.mobile.inputtingText .Chat-input {
+  height: calc(var(--Chat-inputFormHeight) * 4);
+  padding: 6px 12px;
+  margin-top: 12px;
 }
 
 .Chat-sendButton {
@@ -100,7 +121,7 @@
   color: var(--App-blue);
   font-weight: bold;
   font-size: 16px;
-  padding: 0 12px;
-  height: 100%;
+  padding: 10.5px 12px;
   cursor: pointer;
 }
+

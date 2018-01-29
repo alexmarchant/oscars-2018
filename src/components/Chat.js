@@ -16,6 +16,7 @@ class Chat extends Component {
 
     this.state = {
       inputText: '',
+      inputtingText: false,
     }
 
     this.completedFirstLoad = false
@@ -65,7 +66,11 @@ class Chat extends Component {
   }
 
   scrollToBottom() {
-    window.scrollTo(0,document.body.scrollHeight)
+    window.scrollTo(0, document.body.scrollHeight)
+  }
+
+  scrollToTop() {
+    window.scrollTo(0, 0)
   }
 
   onSubmitInputText(event) {
@@ -73,11 +78,16 @@ class Chat extends Component {
     const cleanedInputText = this.state.inputText.trim()
     if (cleanedInputText.length < 1) { return }
 
+    document.activeElement.blur()
+
     this.props.dispatch(requestPushChatMessage(
       this.props.currentUser,
       cleanedInputText,
     ))
-    this.setState({ inputText: '' })
+    this.setState({
+      inputText: '',
+      inputtingText: false,
+    })
   }
 
   chatMessagesGroupedByUser() {
@@ -101,7 +111,12 @@ class Chat extends Component {
 
   render() {
     return (
-      <div className="Chat">
+      <div
+        className={cx('Chat', {
+          inputtingText: this.state.inputtingText,
+          mobile: isMobile(),
+        })}
+      >
         <div
           className="Chat-messageList"
         >
@@ -131,18 +146,39 @@ class Chat extends Component {
           onSubmit={this.onSubmitInputText}
           action="#"
         >
-          <input
+          <textarea
             className="Chat-input"
             type="text"
             placeholder="Type a message"
             onChange={e => this.setState({inputText: e.target.value})}
-            onFocus={() => this.inputFocus = true}
-            onBlur={() => this.inputFocus = false}
+            onFocus={() => {
+              this.setState({inputtingText: true})
+              // Don't let the keyboard slide up the screen
+              if (isMobile()) {
+                const interval = setInterval(() => {
+                  this.scrollToTop()
+                }, 30)
+                setTimeout(() => { clearInterval(interval) }, 500)
+              }
+            }}
+            onBlur={e => {
+              this.setState({inputtingText: false})
+              if (isMobile()) { this.scrollToBottom() }
+            }}
+            onKeyUp={e => {
+              if (e.keyCode === 13) {
+                this.onSubmitInputText(e)
+              }
+            }}
             value={this.state.inputText}
           />
-          <button className="Chat-sendButton">
-            Send
-          </button>
+          <input
+            type="submit"
+            className="Chat-sendButton"
+            onTouchStart={this.onSubmitInputText}
+            onClick={this.onSubmitInputText}
+            value="Send"
+          />
         </form>
       </div>
     )
