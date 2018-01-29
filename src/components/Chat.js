@@ -26,6 +26,7 @@ class Chat extends Component {
 
   componentDidMount() {
     this.props.dispatch(startListeningForChatMessagesUpdates())
+    this.scrollToBottom()
   }
 
   componentWillUnmount() {
