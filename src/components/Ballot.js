@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import {
   startListeningForBallotUpdates,
   stopListeningForBallotUpdates,
-  requestUpdateBallotCategory,
+  // requestUpdateBallotCategory,
 } from '../actions/ballot'
 
 class Ballot extends Component {

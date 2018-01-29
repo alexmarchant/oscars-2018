@@ -6,6 +6,7 @@ import {
   stopListeningForWinnersUpdates,
   requestUpdateWinnersCategory,
 } from '../actions/winners'
+import { requestPushChatMessage } from '../actions/chatMessages'
 import './Admin.css'
 
 class Admin extends Component {
@@ -22,10 +23,18 @@ class Admin extends Component {
     this.props.dispatch(requestUpdateWinnersCategory(category, winner))
   }
 
+  sendTestChatMessage = () => {
+    this.props.dispatch(requestPushChatMessage({
+      uid: '0',
+      displayName: 'Test User',
+    }, 'Test message'))
+  }
+
   render() {
     return (
       <div className="Admin">
         <h1>Admin</h1>
+        <button onClick={this.sendTestChatMessage}>Send test chat message</button>
         {ballotData.categories.map((category) => (
           <div key={category.title}>
             <h2>{category.title}</h2>

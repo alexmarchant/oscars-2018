@@ -6,6 +6,7 @@ import {
   stopListeningForChatMessagesUpdates,
   requestPushChatMessage,
 } from '../actions/chatMessages'
+import isMobile from '../lib/isMobile'
 import ping from '../media/ping.ogg'
 import './Chat.css'
 
@@ -24,12 +25,10 @@ class Chat extends Component {
 
   componentDidMount() {
     this.props.dispatch(startListeningForChatMessagesUpdates())
-    window.addEventListener('touchstart', this.hideKeyboard)
   }
 
   componentWillUnmount() {
     this.props.dispatch(stopListeningForChatMessagesUpdates())
-    window.removeEventListener('touchstart', this.hideKeyboard)
   }
 
   componentDidUpdate(prevProps, prevState) {
@@ -43,25 +42,30 @@ class Chat extends Component {
   }
 
   newMessagesAdded(newMessages) {
+    // Some things (like playing the ping noise for new messages)
+    // shouldn't happen on first load
     if (this.completedFirstLoad) {
+      // If any new messages not from myself
       if (
         newMessages.filter(message => (
           message.user.uid !== this.props.currentUser.uid
-        )).length > 0
+        )).length > 0 &&
+        !isMobile()
       ) {
         this.ping.play()
       }
     }
+
+    // Scrolling while the keyboard is open on ios messes
+    // stuff up
+    if (!isMobile() || !this.inputFocus) {
+      this.scrollToBottom()
+    }
     this.completedFirstLoad = true
-    this.scrollToBottom()
   }
 
   scrollToBottom() {
     window.scrollTo(0,document.body.scrollHeight)
-  }
-
-  hideKeyboard() {
-    document.activeElement.blur()
   }
 
   onSubmitInputText(event) {
@@ -126,13 +130,14 @@ class Chat extends Component {
           className="Chat-inputForm"
           onSubmit={this.onSubmitInputText}
           action="#"
-          onTouchStart={e => e.stopPropagation()}
         >
           <input
             className="Chat-input"
             type="text"
             placeholder="Type a message"
             onChange={e => this.setState({inputText: e.target.value})}
+            onFocus={() => this.inputFocus = true}
+            onBlur={() => this.inputFocus = false}
             value={this.state.inputText}
           />
           <button className="Chat-sendButton">
