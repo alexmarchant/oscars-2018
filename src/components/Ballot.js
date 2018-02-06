@@ -67,7 +67,7 @@ class Ballot extends Component {
             <li>Each category has a certain number of points assigned. Person with the most points wins.</li>
             <li>In case of a tie, the pot will be split evenly.</li>
           </ul>
-          <p className="Ballot-warning">Make sure to come back on oscar night a see your score update in real time in the "Rankings" tab. Also this year we have real time chat in the "Chat" tab.</p>
+          <p className="Ballot-warning">Make sure to come back on oscar night and see your score update in real time in the "Rankings" tab. Also this year we have real time chat in the "Chat" tab.</p>
           <hr />
           {ballotData.categories.map((category) => (
             <div
