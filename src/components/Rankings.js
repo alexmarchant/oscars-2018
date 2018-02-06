@@ -83,16 +83,23 @@ class Rankings extends Component {
                     odd: index % 2 === 0,
                     even: index % 2 !== 0,
                     mine: user.uid === this.props.currentUser.uid,
+                    paid: user.ballot && user.ballot.venmo,
                   })}
                   key={user.uid}
                 >
                   <td className="Rankings-rank">{index + 1}</td>
-                  <td>{user.displayName}</td>
+                  <td>
+                    {user.displayName}
+                    {user.ballot && user.ballot.venmo && (
+                      <span>&nbsp;&#x2714;</span>
+                    )}
+                  </td>
                   <td className="Rankings-score">{this.scoreForUser(user)}</td>
                 </tr>
               ))}
             </tbody>
           </table>
+          <p className="Rankings-note">&#x2714; = that person has paid into the pot.</p>
         </Page>
       </div>
     )
