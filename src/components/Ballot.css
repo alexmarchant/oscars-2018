@@ -1,0 +1,32 @@
+.Ballot-category.won {
+  background-color: rgba(0, 255, 0, 0.2);
+}
+
+.Ballot-category.lost {
+  background-color: rgba(255, 0, 0, 0.2);
+}
+
+.Ballot-nomineeFilm {
+  color: #777;
+}
+
+.Ballot-winner {
+  font-weight: bold;
+}
+
+.Ballot-warning {
+  color: red;
+  font-weight: bold;
+}
+
+.Ballot-success {
+  color: green;
+  font-weight: bold;
+}
+
+.Ballot-note {
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 0.9rem;
+  margin-top: 5px;
+  font-weight: normal;
+}

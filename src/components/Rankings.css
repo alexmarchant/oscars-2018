@@ -1,0 +1,34 @@
+.Rankings-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.Rankings-table thead {
+  font-weight: bold;
+}
+
+.Rankings-table tr.odd {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.Rankings-table tr.event {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.Rankings-table tr.mine {
+  background-color: rgba(255, 255, 0, 0.5);
+}
+
+.Rankings-table td {
+  padding: 7px 10px;
+}
+
+.Rankings-rank {
+  width: 50px;
+  text-align: center;
+}
+
+.Rankings-score {
+  text-align: right;
+  width: 50px;
+}

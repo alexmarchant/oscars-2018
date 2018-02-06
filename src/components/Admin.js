@@ -7,18 +7,19 @@ import {
   requestUpdateWinnersCategory,
 } from '../actions/winners'
 import { requestPushChatMessage } from '../actions/chatMessages'
+import Page from './Page'
 import './Admin.css'
 
 class Admin extends Component {
   componentDidMount() {
-      this.props.dispatch(startListeningForWinnersUpdates())
+    this.props.dispatch(startListeningForWinnersUpdates())
   }
 
   componentWillUnmount() {
-      this.props.dispatch(stopListeningForWinnersUpdates())
+    this.props.dispatch(stopListeningForWinnersUpdates())
   }
 
-  onNomineeClick = (event, category, nominee) => {
+  onChangeNominee = (event, category, nominee) => {
     const winner = event.currentTarget.checked ? nominee : null
     this.props.dispatch(requestUpdateWinnersCategory(category, winner))
   }
@@ -33,28 +34,30 @@ class Admin extends Component {
   render() {
     return (
       <div className="Admin">
-        <h1>Admin</h1>
-        <button onClick={this.sendTestChatMessage}>Send test chat message</button>
-        {ballotData.categories.map((category) => (
-          <div key={category.title}>
-            <h2>{category.title}</h2>
-            {category.nominees.map((nominee) => (
-              <div key={nominee.name}>
-                <label>
-                  <input
-                    type="checkbox"
-                    checked={this.props.winners[category.title] === nominee.name}
-                    onClick={e => this.onNomineeClick(e, category, nominee)}
-                  />
-                  {nominee.name}
-                  {nominee.name !== nominee.film && (
-                    <span className="Admin-nomineeFilm"> - {nominee.film}</span>
-                  )}
-                </label>
-              </div>
-            ))}
-          </div>
-        ))}
+        <Page>
+          <h1>Admin</h1>
+          <button onClick={this.sendTestChatMessage}>Send test chat message</button>
+          {ballotData.categories.map((category) => (
+            <div key={category.title}>
+              <h2>{category.title} ({category.points}pts)</h2>
+              {category.nominees.map((nominee) => (
+                <div key={nominee.name}>
+                  <label>
+                    <input
+                      type="checkbox"
+                      checked={this.props.winners[category.title] === nominee.name}
+                      onChange={e => this.onChangeNominee(e, category, nominee)}
+                    />
+                    {nominee.name}
+                    {nominee.name !== nominee.film && (
+                      <span className="Admin-nomineeFilm"> - {nominee.film}</span>
+                    )}
+                  </label>
+                </div>
+              ))}
+            </div>
+          ))}
+        </Page>
       </div>
     )
   }

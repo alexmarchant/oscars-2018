@@ -31,12 +31,11 @@ function receivedBallotUpdate(ballot) {
   }
 }
 
-export const REQUEST_UPDATE_BALLOT_CATEGORY = 'REQUEST_UPDATE_BALLOT_CATEGORY'
-export function requestUpdateBallotCategory(category, nominee) {
+export const REQUEST_UPDATE_BALLOT = 'REQUEST_UPDATE_BALLOT'
+export function requestUpdateBallot(key, value) {
   const user = store.getState().auth.currentUser
-  const value = nominee ? nominee.name : null
-  makeBallotRef(user).child(category.title).set(value)
+  makeBallotRef(user).child(key).set(value)
   return {
-    type: REQUEST_UPDATE_BALLOT_CATEGORY,
+    type: REQUEST_UPDATE_BALLOT,
   }
 }

@@ -1,13 +1,15 @@
+import allUsers from './allUsers'
 import auth from './auth'
-import winners from './winners'
-import chatMessages from './chatMessages'
 import ballot from './ballot'
+import chatMessages from './chatMessages'
+import winners from './winners'
 
 const reducers = {
+  allUsers,
   auth,
-  winners,
-  chatMessages,
   ballot,
+  chatMessages,
+  winners,
 }
 
 export default reducers

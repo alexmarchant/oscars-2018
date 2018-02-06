@@ -2,6 +2,7 @@
   "categories": [
     {
       "title": "Best Picture",
+      "points": 5,
       "nominees": [
         {
           "name": "Call Me by Your Name",
@@ -70,6 +71,7 @@
     },
     {
       "title": "Director",
+      "points": 5,
       "nominees": [
         {
           "name": "Paul Thomas Anderson",
@@ -110,6 +112,7 @@
     },
     {
       "title": "Actor in a Leading Role",
+      "points": 5,
       "nominees": [
         {
           "name": "Timoth\u00e9e Chalamet",
@@ -150,6 +153,7 @@
     },
     {
       "title": "Actress in a Leading Role",
+      "points": 5,
       "nominees": [
         {
           "name": "Sally Hawkins",
@@ -190,6 +194,7 @@
     },
     {
       "title": "Actor in a Supporting Role",
+      "points": 4,
       "nominees": [
         {
           "name": "Willem Dafoe",
@@ -230,6 +235,7 @@
     },
     {
       "title": "Actress in a Supporting Role",
+      "points": 4,
       "nominees": [
         {
           "name": "Mary J. Blige",
@@ -270,6 +276,7 @@
     },
     {
       "title": "Original Screenplay",
+      "points": 4,
       "nominees": [
         {
           "name": "The Big Sick",
@@ -310,6 +317,7 @@
     },
     {
       "title": "Adapted Screenplay",
+      "points": 4,
       "nominees": [
         {
           "name": "Call Me by Your Name",
@@ -350,6 +358,7 @@
     },
     {
       "title": "Foreign Language Film",
+      "points": 1,
       "nominees": [
         {
           "name": "A Fantastic Woman",
@@ -390,6 +399,7 @@
     },
     {
       "title": "Animated Feature",
+      "points": 3,
       "nominees": [
         {
           "name": "The Boss Baby",
@@ -430,6 +440,7 @@
     },
     {
       "title": "Sound Editing",
+      "points": 3,
       "nominees": [
         {
           "name": "Baby Driver",
@@ -470,6 +481,7 @@
     },
     {
       "title": "Visual Effects",
+      "points": 3,
       "nominees": [
         {
           "name": "Blade Runner 2049",
@@ -510,6 +522,7 @@
     },
     {
       "title": "Film Editing",
+      "points": 3,
       "nominees": [
         {
           "name": "Baby Driver",
@@ -550,6 +563,7 @@
     },
     {
       "title": "Short Film, Animated",
+      "points": 1,
       "nominees": [
         {
           "name": "Dear Basketball",
@@ -590,6 +604,7 @@
     },
     {
       "title": "Short Film, Live Action",
+      "points": 1,
       "nominees": [
         {
           "name": "DeKalb Elementary",
@@ -630,6 +645,7 @@
     },
     {
       "title": "Documentary Short Subject",
+      "points": 1,
       "nominees": [
         {
           "name": "Edith+Eddie",
@@ -670,6 +686,7 @@
     },
     {
       "title": "Original Score",
+      "points": 3,
       "nominees": [
         {
           "name": "Dunkirk",
@@ -710,6 +727,7 @@
     },
     {
       "title": "Original Song",
+      "points": 3,
       "nominees": [
         {
           "name": "Mighty River",
@@ -750,6 +768,7 @@
     },
     {
       "title": "Production Design",
+      "points": 3,
       "nominees": [
         {
           "name": "Beauty and the Beast",
@@ -790,6 +809,7 @@
     },
     {
       "title": "Cinematography",
+      "points": 3,
       "nominees": [
         {
           "name": "Blade Runner 2049",
@@ -830,6 +850,7 @@
     },
     {
       "title": "Costume Design",
+      "points": 3,
       "nominees": [
         {
           "name": "Beauty and the Beast",
@@ -870,6 +891,7 @@
     },
     {
       "title": "Makeup",
+      "points": 3,
       "nominees": [
         {
           "name": "Darkest Hour",
@@ -896,6 +918,7 @@
     },
     {
       "title": "Documentary Feature",
+      "points": 3,
       "nominees": [
         {
           "name": "Abacus: Small Enough to Jail",
@@ -936,6 +959,7 @@
     },
     {
       "title": "Sound Mixing",
+      "points": 3,
       "nominees": [
         {
           "name": "Baby Driver",
