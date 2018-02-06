@@ -55,11 +55,19 @@ class Rankings extends Component {
       }, 0)
   }
 
+  totalPot() {
+    return Object
+      .values(this.props.allUsers)
+      .filter(user => user.ballot && user.ballot.venmo)
+      .reduce((accumulator, user) => accumulator + 5, 0)
+  }
+
   render() {
     return (
       <div className="Rankings">
         <Page>
           <h1>Rankings</h1>
+          <p><strong>Total pot: ${this.totalPot()}</strong></p>
           <table className="Rankings-table">
             <thead>
               <tr>
