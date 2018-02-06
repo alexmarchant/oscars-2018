@@ -59,7 +59,7 @@ class Ballot extends Component {
           <h3>Instructions</h3>
           <ul>
             <li>Fill out the form</li>
-            <li>Send <a href="https://venmo.com/amarchant">@alexmarchant</a> $5 on venmo</li>
+            <li>Send <a href="https://venmo.com/amarchant" target="_blank">@alexmarchant</a> $5 on venmo</li>
           </ul>
           <h3>Rules</h3>
           <ul>
@@ -110,7 +110,7 @@ class Ballot extends Component {
               checked={this.props.ballot.venmo || false}
               onChange={e => this.updateBallot(e, 'venmo', true)}
             />
-            I sent <a href="https://venmo.com/amarchant">@alexmarchant</a> $5 on venmo (or other means).
+            I sent <a href="https://venmo.com/amarchant" target="_blank">@alexmarchant</a> $5 on venmo (or other means).
           </label>
           <hr />
           <p>
