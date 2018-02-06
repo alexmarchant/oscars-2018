@@ -91,7 +91,7 @@ class Rankings extends Component {
                   <td>
                     {user.displayName}
                     {user.ballot && user.ballot.venmo && (
-                      <span>&nbsp;&#x2714;</span>
+                      <span className="Rankings-check">&nbsp;&nbsp;&#x2714;</span>
                     )}
                   </td>
                   <td className="Rankings-score">{this.scoreForUser(user)}</td>
@@ -99,7 +99,7 @@ class Rankings extends Component {
               ))}
             </tbody>
           </table>
-          <p className="Rankings-note">&#x2714; = that person has paid into the pot.</p>
+          <p className="Rankings-note"><span className="Rankings-check">&#x2714;</span> = that person has paid into the pot.</p>
         </Page>
       </div>
     )
