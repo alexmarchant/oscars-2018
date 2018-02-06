@@ -63,7 +63,7 @@ class Ballot extends Component {
           </ul>
           <h3>Rules</h3>
           <ul>
-            <li>All forms need to be completed and payments in before the oscars start (Mar 4 6:30PM EST). I'll lock the form at that point too.</li>
+            <li>All forms need to be completed and payments in before the oscars start (Mar 4 6:30PM EST). I'll lock the form at that point.</li>
             <li>Each category has a certain number of points assigned. Person with the most points wins.</li>
             <li>In case of a tie, the pot will be split evenly.</li>
           </ul>
