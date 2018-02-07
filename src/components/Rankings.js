@@ -62,6 +62,15 @@ class Rankings extends Component {
       .reduce((accumulator, user) => accumulator + 5, 0)
   }
 
+  hasCompletedBallot(user) {
+    if (!user.ballot) { return false }
+
+    const fieldsCompleted = Object.keys(user.ballot).length
+    const fieldsCount = Object.keys(ballotData.categories).length + 1
+    const percentCompleted = Math.round((fieldsCompleted / fieldsCount) * 100)
+    return percentCompleted === 100
+  }
+
   render() {
     return (
       <div className="Rankings">
@@ -90,8 +99,17 @@ class Rankings extends Component {
                   <td className="Rankings-rank">{index + 1}</td>
                   <td>
                     {user.displayName}
+                    &nbsp;
+                    &nbsp;
+                    {(user.uid === 'A5ekiQuNltXLKbblDyhFFHEYKra2' ||
+                        user.uid === 'E22xRC5Hg5cvz0gnQEpFNsIhwvy2') && (
+                      <span className="Rankings-symbol">&#x1F451;</span>
+                    )}
                     {user.ballot && user.ballot.venmo && (
-                      <span className="Rankings-check">&nbsp;&nbsp;&#x2714;</span>
+                      <span className="Rankings-symbol">&#x1f4b0;</span>
+                    )}
+                    {this.hasCompletedBallot(user) && (
+                      <span className="Rankings-symbol">&#x1F4AF;</span>
                     )}
                   </td>
                   <td className="Rankings-score">{this.scoreForUser(user)}</td>
@@ -99,7 +117,13 @@ class Rankings extends Component {
               ))}
             </tbody>
           </table>
-          <p className="Rankings-note"><span className="Rankings-check">&#x2714;</span> = that person has paid into the pot.</p>
+          <p className="Rankings-note">
+            <span className="Rankings-symbol">&#x1F451;</span> = previous year winner.
+            <br />
+            <span className="Rankings-symbol">&#x1f4b0;</span> = has paid into the pot.
+            <br />
+            <span className="Rankings-symbol">&#x1F4AF;</span> = has totally filled out their ballot.
+          </p>
         </Page>
       </div>
     )

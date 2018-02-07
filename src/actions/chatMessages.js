@@ -33,15 +33,27 @@ function receivedChatMessagesUpdate(chatMessages) {
 
 export const REQUEST_PUSH_CHAT_MESSAGE = 'REQUEST_PUSH_CHAT_MESSAGE'
 export function requestPushChatMessage(user, body) {
-  chatMessagesRef.push().set({
-    user: {
-      uid: user.uid,
-      displayName: user.displayName,
-    },
-    body: body,
-    timestamp: TIMESTAMP,
-  })
-  return {
-    type: REQUEST_PUSH_CHAT_MESSAGE,
+  return (dispatch) => {
+    dispatch({
+      type: REQUEST_PUSH_CHAT_MESSAGE,
+    })
+    chatMessagesRef.push().set({
+      user: {
+        uid: user.uid,
+        displayName: user.displayName,
+      },
+      body: body,
+      timestamp: TIMESTAMP,
+    })
+  }
+}
+
+export const REQUEST_DELETE_ALL_CHAT_MESSAGES = 'REQUEST_DELETE_ALL_CHAT_MESSAGES'
+export function requestDeleteAllChatMessages() {
+  return (dispatch) => {
+    dispatch({
+      type: REQUEST_DELETE_ALL_CHAT_MESSAGES,
+    })
+    chatMessagesRef.remove()
   }
 }

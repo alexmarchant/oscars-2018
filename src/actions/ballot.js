@@ -16,10 +16,12 @@ export function startListeningForBallotUpdates() {
 
 export const STOP_LISTENING_FOR_BALLOT_UPDATES = 'STOP_LISTENING_FOR_BALLOT_UPDATES'
 export function stopListeningForBallotUpdates() {
-  const user = store.getState().auth.currentUser
-  makeBallotRef(user).off()
-  return {
-    type: STOP_LISTENING_FOR_BALLOT_UPDATES,
+  return (dispatch) => {
+    dispatch({
+      type: STOP_LISTENING_FOR_BALLOT_UPDATES,
+    })
+    const user = store.getState().auth.currentUser
+    makeBallotRef(user).off()
   }
 }
 
@@ -33,9 +35,11 @@ function receivedBallotUpdate(ballot) {
 
 export const REQUEST_UPDATE_BALLOT = 'REQUEST_UPDATE_BALLOT'
 export function requestUpdateBallot(key, value) {
-  const user = store.getState().auth.currentUser
-  makeBallotRef(user).child(key).set(value)
-  return {
-    type: REQUEST_UPDATE_BALLOT,
+  return (dispatch) => {
+    dispatch({
+      type: REQUEST_UPDATE_BALLOT,
+    })
+    const user = store.getState().auth.currentUser
+    makeBallotRef(user).child(key).set(value)
   }
 }

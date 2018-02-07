@@ -30,9 +30,11 @@ function receivedWinnersUpdate(winners) {
 
 export const REQUEST_UPDATE_WINNERS_CATEGORY = 'REQUEST_UPDATE_WINNERS_CATEGORY'
 export function requestUpdateWinnersCategory(category, nominee) {
-  const value = nominee ? nominee.name : null
-  winnersRef.child(category.title).set(value)
-  return {
-    type: REQUEST_UPDATE_WINNERS_CATEGORY,
+  return (dispatch) => {
+    dispatch({
+      type: REQUEST_UPDATE_WINNERS_CATEGORY,
+    })
+    const value = nominee ? nominee.name : null
+    winnersRef.child(category.title).set(value)
   }
 }

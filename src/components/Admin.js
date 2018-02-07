@@ -6,17 +6,27 @@ import {
   stopListeningForWinnersUpdates,
   requestUpdateWinnersCategory,
 } from '../actions/winners'
-import { requestPushChatMessage } from '../actions/chatMessages'
+import {
+  requestPushChatMessage,
+  requestDeleteAllChatMessages,
+} from '../actions/chatMessages'
+import {
+  startListeningForChatUpdates,
+  stopListeningForChatUpdates,
+  requestDisableChat
+} from '../actions/chat'
 import Page from './Page'
 import './Admin.css'
 
 class Admin extends Component {
   componentDidMount() {
     this.props.dispatch(startListeningForWinnersUpdates())
+    this.props.dispatch(startListeningForChatUpdates())
   }
 
   componentWillUnmount() {
     this.props.dispatch(stopListeningForWinnersUpdates())
+    this.props.dispatch(stopListeningForChatUpdates())
   }
 
   onChangeNominee = (event, category, nominee) => {
@@ -31,12 +41,38 @@ class Admin extends Component {
     }, 'Test message'))
   }
 
+  clearAllChatMessages = () => {
+    this.props.dispatch(requestDeleteAllChatMessages())
+  }
+
+  disableChat = (event) => {
+    const disabled = event.currentTarget.checked
+    this.props.dispatch(requestDisableChat(disabled))
+  }
+
   render() {
     return (
       <div className="Admin">
         <Page>
           <h1>Admin</h1>
-          <button onClick={this.sendTestChatMessage}>Send test chat message</button>
+          <hr />
+          <p>
+            <button onClick={this.sendTestChatMessage}>Send test chat message</button>
+          </p>
+          <p>
+            <button onClick={this.clearAllChatMessages}>Clear all chat messages</button>
+          </p>
+          <p>
+            <label>
+              <input
+                type="checkbox"
+                checked={this.props.chat.disabled}
+                onChange={e => this.disableChat(e)}
+              />
+              Disable chat
+            </label>
+          </p>
+          <hr />
           {ballotData.categories.map((category) => (
             <div key={category.title}>
               <h2>{category.title} ({category.points}pts)</h2>
@@ -66,6 +102,7 @@ class Admin extends Component {
 function mapStateToProps(state) {
   return {
     winners: state.winners,
+    chat: state.chat,
   }
 }
 export default connect(mapStateToProps)(Admin)

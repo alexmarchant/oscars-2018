@@ -37,6 +37,7 @@ export function renderFirebaseUI(containerID) {
 // Different refs for reading/writing to different parts of the database
 export const winnersRef = database.ref('winners')
 export const chatMessagesRef = database.ref('chatMessages')
+export const chatRef = database.ref('chat')
 export const usersRef = database.ref('users')
 export const makeUserRef = (user) => usersRef.child(user.uid)
 export const makeBallotRef = (user) => makeUserRef(user).child('ballot')

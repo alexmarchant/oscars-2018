@@ -6,6 +6,10 @@ import {
   stopListeningForChatMessagesUpdates,
   requestPushChatMessage,
 } from '../actions/chatMessages'
+import {
+  startListeningForChatUpdates,
+  stopListeningForChatUpdates,
+} from '../actions/chat'
 import isMobile from '../lib/isMobile'
 import ping from '../media/ping.ogg'
 import './Chat.css'
@@ -26,11 +30,13 @@ class Chat extends Component {
 
   componentDidMount() {
     this.props.dispatch(startListeningForChatMessagesUpdates())
+    this.props.dispatch(startListeningForChatUpdates())
     this.scrollToBottom()
   }
 
   componentWillUnmount() {
     this.props.dispatch(stopListeningForChatMessagesUpdates())
+    this.props.dispatch(stopListeningForChatUpdates())
   }
 
   componentDidUpdate(prevProps, prevState) {
@@ -113,6 +119,10 @@ class Chat extends Component {
   }
 
   render() {
+    if (this.props.chat.disabled) {
+      return <p>Chat has been disabled</p>
+    }
+
     return (
       <div
         className={cx('Chat', {
@@ -197,6 +207,7 @@ function mapStateToProps(state) {
   return {
     chatMessages: state.chatMessages,
     currentUser: state.auth.currentUser,
+    chat: state.chat,
   }
 }
 export default connect(mapStateToProps)(Chat)

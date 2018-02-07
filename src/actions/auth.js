@@ -37,8 +37,10 @@ export function receivedLogOut() {
 
 export const REQUEST_LOG_OUT = 'REQUEST_LOG_OUT'
 export function requestLogOut() {
-  auth.signOut()
-  return {
-    type: REQUEST_LOG_OUT,
+  return (dispatch) => {
+    dispatch({
+      type: REQUEST_LOG_OUT,
+    })
+    auth.signOut()
   }
 }
