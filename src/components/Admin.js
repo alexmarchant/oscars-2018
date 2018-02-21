@@ -15,6 +15,11 @@ import {
   stopListeningForChatUpdates,
   requestDisableChat
 } from '../actions/chat'
+import {
+  startListeningForGlobalBallotUpdates,
+  stopListeningForGlobalBallotUpdates,
+  requestDisableGlobalBallot,
+} from '../actions/globalBallot'
 import Page from './Page'
 import './Admin.css'
 
@@ -22,11 +27,13 @@ class Admin extends Component {
   componentDidMount() {
     this.props.dispatch(startListeningForWinnersUpdates())
     this.props.dispatch(startListeningForChatUpdates())
+    this.props.dispatch(startListeningForGlobalBallotUpdates())
   }
 
   componentWillUnmount() {
     this.props.dispatch(stopListeningForWinnersUpdates())
     this.props.dispatch(stopListeningForChatUpdates())
+    this.props.dispatch(stopListeningForGlobalBallotUpdates())
   }
 
   onChangeNominee = (event, category, nominee) => {
@@ -50,12 +57,18 @@ class Admin extends Component {
     this.props.dispatch(requestDisableChat(disabled))
   }
 
+  disableGlobalBallot = (event) => {
+    const disabled = event.currentTarget.checked
+    this.props.dispatch(requestDisableGlobalBallot(disabled))
+  }
+
   render() {
     return (
       <div className="Admin">
         <Page>
           <h1>Admin</h1>
           <hr />
+          <h2>Chat</h2>
           <p>
             <button onClick={this.sendTestChatMessage}>Send test chat message</button>
           </p>
@@ -73,9 +86,22 @@ class Admin extends Component {
             </label>
           </p>
           <hr />
+          <h2>Ballot</h2>
+          <p>
+            <label>
+              <input
+                type="checkbox"
+                checked={this.props.globalBallot.disabled}
+                onChange={e => this.disableGlobalBallot(e)}
+              />
+              Disable ballot
+            </label>
+          </p>
+          <hr />
+          <h2>Winners</h2>
           {ballotData.categories.map((category) => (
             <div key={category.title}>
-              <h2>{category.title} ({category.points}pts)</h2>
+              <h3>{category.title} ({category.points}pts)</h3>
               {category.nominees.map((nominee) => (
                 <div key={nominee.name}>
                   <label>
@@ -103,6 +129,7 @@ function mapStateToProps(state) {
   return {
     winners: state.winners,
     chat: state.chat,
+    globalBallot: state.globalBallot,
   }
 }
 export default connect(mapStateToProps)(Admin)

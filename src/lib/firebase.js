@@ -41,6 +41,7 @@ export const chatRef = database.ref('chat')
 export const usersRef = database.ref('users')
 export const makeUserRef = (user) => usersRef.child(user.uid)
 export const makeBallotRef = (user) => makeUserRef(user).child('ballot')
+export const globalBallotRef = database.ref('globalBallot')
 
 // Contant that you can send to firebase that will be replaced
 // with a server populated value for the timestamp

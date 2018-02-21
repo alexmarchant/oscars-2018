@@ -11,6 +11,10 @@ import {
   startListeningForWinnersUpdates,
   stopListeningForWinnersUpdates,
 } from '../actions/winners'
+import {
+  startListeningForGlobalBallotUpdates,
+  stopListeningForGlobalBallotUpdates,
+} from '../actions/globalBallot'
 import Page from './Page'
 import './Ballot.css'
 
@@ -20,6 +24,7 @@ class Ballot extends Component {
       startListeningForBallotUpdates(this.props.currentUser)
     )
     this.props.dispatch(startListeningForWinnersUpdates())
+    this.props.dispatch(startListeningForGlobalBallotUpdates())
   }
 
   componentWillUnmount() {
@@ -27,9 +32,11 @@ class Ballot extends Component {
       stopListeningForBallotUpdates(this.props.currentUser)
     )
     this.props.dispatch(stopListeningForWinnersUpdates())
+    this.props.dispatch(stopListeningForGlobalBallotUpdates())
   }
 
   updateBallot = (event, key, value) => {
+    if (this.props.globalBallot.disabled) { return; }
     const dispatchValue = event.currentTarget.checked ? value : null
     this.props.dispatch(requestUpdateBallot(key, dispatchValue))
   }
@@ -56,18 +63,26 @@ class Ballot extends Component {
         <Page>
           <h1>Ballot</h1>
           <hr />
-          <h3>Instructions</h3>
-          <ul>
-            <li>Fill out the form</li>
-            <li>Send <a href="https://venmo.com/amarchant" target="_blank" rel="noopener noreferrer">@amarchant</a> $5 on venmo</li>
-          </ul>
-          <h3>Rules</h3>
-          <ul>
-            <li>All forms need to be completed and payments in before the oscars start (Mar 4 6:30PM EST). I'll lock the form at that point.</li>
-            <li>Each category has a certain number of points assigned. Person with the most points wins.</li>
-            <li>In case of a tie, the pot will be split evenly.</li>
-          </ul>
-          <p className="Ballot-warning">Make sure to come back on oscar night and see your score update in real time in the "Rankings" tab. Also this year we have real time chat in the "Chat" tab.</p>
+          {this.props.globalBallot.disabled ? (
+            <div>
+              <h3 className="Ballot-warning">Voting has been locked</h3>
+            </div>
+          ) : (
+            <div>
+              <h3>Instructions</h3>
+              <ul>
+                <li>Fill out the form</li>
+                <li>Send <a href="https://venmo.com/amarchant" target="_blank" rel="noopener noreferrer">@amarchant</a> $5 on venmo</li>
+              </ul>
+              <h3>Rules</h3>
+              <ul>
+                <li>All forms need to be completed and payments in before the oscars start (Mar 4 6:30PM EST). I'll lock the form at that point.</li>
+                <li>Each category has a certain number of points assigned. Person with the most points wins.</li>
+                <li>In case of a tie, the pot will be split evenly.</li>
+              </ul>
+              <p className="Ballot-warning">Make sure to come back on oscar night and see your score update in real time in the "Rankings" tab. Also this year we have real time chat in the "Chat" tab.</p>
+            </div>
+          )}
           <hr />
           {ballotData.categories.map((category) => (
             <div
@@ -145,6 +160,7 @@ function mapStateToProps(state) {
     ballot: state.ballot,
     currentUser: state.auth.currentUser,
     winners: state.winners,
+    globalBallot: state.globalBallot,
   }
 }
 export default connect(mapStateToProps)(Ballot)
