@@ -55,6 +55,23 @@ class Rankings extends Component {
       }, 0)
   }
 
+  correctAnswersForUser(user) {
+    let correctAnswers = 0
+
+    Object.keys(this.props.winners).forEach((categoryTitle) => {
+      if (
+        user.ballot &&
+        user.ballot[categoryTitle] === this.props.winners[categoryTitle]
+      ) {
+        correctAnswers += 1
+      } else {
+        console.log(user.displayName, categoryTitle)
+      }
+    })
+
+    return correctAnswers
+  }
+
   totalPot() {
     return Object
       .values(this.props.allUsers)
@@ -83,6 +100,7 @@ class Rankings extends Component {
                 <td className="Rankings-rank">Rank</td>
                 <td>Name</td>
                 <td className="Rankings-score">Score</td>
+                <td className="Rankings-correct">Correct</td>
               </tr>
             </thead>
             <tbody>
@@ -113,6 +131,11 @@ class Rankings extends Component {
                     )}
                   </td>
                   <td className="Rankings-score">{this.scoreForUser(user)}</td>
+                  <td className="Rankings-correct">
+                    {this.correctAnswersForUser(user)}
+                    /
+                    {Object.keys(this.props.winners).length}
+                  </td>
                 </tr>
               ))}
             </tbody>

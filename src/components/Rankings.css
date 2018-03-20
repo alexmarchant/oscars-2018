@@ -32,7 +32,8 @@
   color: rgba(0, 0, 0, 1);
 }
 
-.Rankings-score {
+.Rankings-score,
+.Rankings-correct {
   text-align: right;
   width: 50px;
 }
